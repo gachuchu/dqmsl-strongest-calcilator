@@ -347,6 +347,7 @@
         MonsParam.Keys.forEach((p) => {
           tbl.querySelector('tr.'+p).cells[1 + star].innerHTML = mons.GetParam(p);
         });
+        tbl.querySelector('tr.sum').cells[1 + star].innerHTML = mons.param.sum;
       }
       // 最強
       let strong = mons_data.flat().sort((a, b) => {
@@ -372,6 +373,8 @@
         tr.cells[1+4+1].innerHTML = strong.GetParam(p); // 最強
         tr.cells[1+4+2].innerHTML = '+' + (strong.GetParam(p) - mons_data[4][0].GetParam(p)); // ☆４と最強の差分
       });
+      tbl.querySelector('tr.sum').cells[1+4+1].innerHTML = strong.param.sum;
+      tbl.querySelector('tr.sum').cells[1+4+2].innerHTML = '+' + (strong.param.sum - mons_data[4][0].param.sum);
 
       // レシピ貼り付け
       tbl.rows[1].cells[8].querySelector('pre.recipe').innerText = strong.GetRecipeStringArray().flat(depth+1).join("\n");
