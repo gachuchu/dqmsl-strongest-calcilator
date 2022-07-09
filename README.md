@@ -1,2 +1,2 @@
 # dqmsl-strongest-calcilator
-DQMSLの最強ステータスを計算する
+DQMSLの最強ステータスを計算します
