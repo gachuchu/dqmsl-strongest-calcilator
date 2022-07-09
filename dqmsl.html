@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+ <head>
+  <meta charset="utf-8">
+  <title>DQMSL最強ステータス計算</title>
+  <link rel="stylesheet" href="css/dqmsl.css">
+ </head>
+ <body>
+  <div>
+   <textarea id="load_text" placeholder="モンスター名 HP MP 攻撃力 防御力 素早さ 賢さ
+転生モンス名 HP MP 攻撃力 防御力 素早さ 賢さ
+..."></textarea><br />
+   <button id="load">ロード</button>
+   <button id="reset">リセット</button>
+   <button id="add">1段追加</button>
+   <button id="del">1段削除</button>
+   <button id="trans1">1段階</button>
+   <button id="trans2">2段階</button>
+   <button id="trans3">3段階</button>
+   &nbsp;&nbsp;<button id="calc">計算</button>
+   <div>
+    <label><input type="checkbox" checked name="all" disabled="disabled">ALL</label>&nbsp;&nbsp;
+    <span id="target_param">
+     <label><input type="checkbox" checked name="hp">HP</label>&nbsp;
+     <label><input type="checkbox" checked name="mp">MP</label>&nbsp;
+     <label><input type="checkbox" checked name="atk">攻撃力</label>&nbsp;
+     <label><input type="checkbox" checked name="def">防御力</label>&nbsp;
+     <label><input type="checkbox" checked name="spd">素早さ</label>&nbsp;
+     <label><input type="checkbox" checked name="int">賢さ</label>&nbsp;
+    </span>
+   </div>
+  </div>
+
+  <div id="src">
+   <table>
+    <tr class="kind">
+     <th><input type="text" value=""></th><th>素体</th><th>☆1</th><th>☆2</th><th>☆3</th><th>☆4</th><th>最強</th><th>☆4差</th><th>レシピ</th>
+    </tr>
+    <tr class="hp">
+     <td>HP</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td><td rowspan="7"><pre class="recipe"></pre></td>
+    </tr>
+    <tr class="mp">
+     <td>MP</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr class="atk">
+     <td>攻撃力</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr class="def">
+     <td>防御力</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr class="spd">
+     <td>素早さ</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr class="int">
+     <td>賢さ</td><td><input type="number" min="1" value=""></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+    <tr class="sum">
+     <td>合計</td><td></td>
+     <td></td><td></td><td></td><td></td><td></td><td></td>
+    </tr>
+   </table>
+  </div>
+
+  <div id="dst">
+  </div>
+  <script src="js/dqmsl.js"></script>
+ </body>
+</html>

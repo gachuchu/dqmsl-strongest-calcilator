@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+body {
+font-size:14px;
+}
+
+textarea {
+margin:5px 0px 3px 2px;
+width:40em;
+height:3.6em;
+font-size:12px;
+}
+
+input {
+font-size:12px;
+}
+
+input[type="number"] {
+width:4.2em;
+}
+
+table th,
+table td {
+padding: 0.1em 10px 0.1em 0.2em;
+border: 1px solid #bbb;
+vertical-align:top;
+}
+
+table tr {
+background-color:#fff;
+}
+
+table tr.disabled {
+background-color:#888;
+}
+
+table tr.hp td:last-child {
+background-color:#fff;
+}
+
+div#src {
+display:none;
+}
+
+pre {
+margin:0px;
+padding:2px;
+font-size:12px;
+}
